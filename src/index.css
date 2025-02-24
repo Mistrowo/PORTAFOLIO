@@ -1,0 +1,97 @@
+/* Añade estos estilos al final de tu index.css */
+
+/* Animaciones para el hero */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { 
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-wave {
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-scrollDown {
+  animation: scrollDown 1.5s infinite;
+}
+
+/* Establecer el cuerpo para que funcione bien con el hero a pantalla completa */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Asegurar que el contenedor principal utilice el ancho completo */
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
